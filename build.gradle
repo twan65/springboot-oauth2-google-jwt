@@ -33,13 +33,18 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-aop'
     implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    compile 'io.jsonwebtoken:jjwt:0.7.0'
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     compile('org.springframework.session:spring-session-jdbc')
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
+
     //embedded-redis
     compile group: 'it.ozimov', name: 'embedded-redis', version: '0.7.1'
+
+
 
     implementation "org.projectlombok:lombok:${lombokVersion}"
     compile('com.h2database:h2')

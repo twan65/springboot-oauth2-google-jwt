@@ -1,0 +1,19 @@
+- OAuth2ログインフローは、ユーザーをエンドポイントに送信することにより、フロントエンドクライアントによって開始されます。http://localhost:8080/oauth2/authorize/{provider}?redirect_uri=<redirect_uri_after_login>
+providerpathパラメータは次のいずれかであるgoogle、facebookまたはgithub。これredirect_uriは、OAuth2プロバイダーによる認証が成功したときにユーザーがリダイレクトされるURIです。これは、OAuth2redirectUriとは異なります。
+  
+
+- 承認リクエストを受信すると、Spring SecurityのOAuth2クライアントは、提供されたのAuthorizationUrlにユーザーをリダイレクトしますprovider。
+承認リクエストに関連するすべての状態authorizationRequestRepositoryは、SecurityConfigで指定されたものを使用して保存されます。
+ユーザーは、プロバイダーのページでアプリへのアクセス許可を許可/拒否するようになりました。ユーザーがアプリへのアクセス許可を許可した場合、プロバイダーはユーザーを認証コードを使用してコールバックURLにリダイレクトします。ユーザーが権限を拒否した場合、ユーザーは同じcallbackUrlにリダイレクトされますが、。http://localhost:8080/oauth2/callback/{provider}error
+
+
+- OAuth2コールバックでエラーが発生した場合、SpringセキュリティはoAuth2AuthenticationFailureHandler上記で指定されたものを呼び出しますSecurityConfig。
+
+
+- OAuth2コールバックが成功し、認証コードが含まれている場合、Spring Securityはをと交換し、上記のSecurityConfigで指定されauthorization_codeたものaccess_tokenを呼び出しcustomOAuth2UserServiceます。
+
+
+- customOAuth2UserService認証されたユーザの詳細情報を取得し、データベースに新しいエントリを作成したり、同じ電子メールでの既存のエントリを更新します。
+
+
+- 最後に、oAuth2AuthenticationSuccessHandlerが呼び出されます。ユーザーのJWT認証トークンを作成redirect_uriし、クエリ文字列でJWTトークンと一緒にユーザーをに送信します。

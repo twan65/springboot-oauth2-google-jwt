@@ -1,0 +1,58 @@
+org/example/app/security/UserPrincipal.java
+ org.example.app.security.UserPrincipal
+org/example/app/model/AuthProvider.java
+ org.example.app.model.AuthProvider
+org/example/app/security/oauth2/user/OAuth2UserInfo.java
+ org.example.app.security.oauth2.user.OAuth2UserInfo
+org/example/app/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java
+ org.example.app.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository
+org/example/app/config/AppProperties.java
+ org.example.app.config.AppProperties
+ org.example.app.config.AppProperties$Auth
+ org.example.app.config.AppProperties$OAuth2
+org/example/app/sample/Sample.java
+ org.example.app.sample.Sample
+org/example/app/exception/OAuth2AuthenticationProcessingException.java
+ org.example.app.exception.OAuth2AuthenticationProcessingException
+org/example/Application.java
+ org.example.Application
+org/example/app/UserController.java
+ org.example.app.UserController
+org/example/app/security/oauth2/CustomOAuth2UserService.java
+ org.example.app.security.oauth2.CustomOAuth2UserService
+org/example/app/security/oauth2/user/GoogleOAuth2UserInfo.java
+ org.example.app.security.oauth2.user.GoogleOAuth2UserInfo
+org/example/app/util/CookieUtils.java
+ org.example.app.util.CookieUtils
+org/example/app/payload/ApiResponse.java
+ org.example.app.payload.ApiResponse
+org/example/app/security/RestAuthenticationEntryPoint.java
+ org.example.app.security.RestAuthenticationEntryPoint
+org/example/app/exception/ResourceNotFoundException.java
+ org.example.app.exception.ResourceNotFoundException
+org/example/app/exception/BadRequestException.java
+ org.example.app.exception.BadRequestException
+org/example/app/payload/AuthResponse.java
+ org.example.app.payload.AuthResponse
+org/example/app/security/oauth2/OAuth2AuthenticationSuccessHandler.java
+ org.example.app.security.oauth2.OAuth2AuthenticationSuccessHandler
+org/example/app/security/oauth2/OAuth2AuthenticationFailureHandler.java
+ org.example.app.security.oauth2.OAuth2AuthenticationFailureHandler
+org/example/app/security/CurrentUser.java
+ org.example.app.security.CurrentUser
+org/example/app/security/TokenAuthenticationFilter.java
+ org.example.app.security.TokenAuthenticationFilter
+org/example/app/config/WebMvcConfig.java
+ org.example.app.config.WebMvcConfig
+org/example/app/security/oauth2/user/OAuth2UserInfoFactory.java
+ org.example.app.security.oauth2.user.OAuth2UserInfoFactory
+org/example/app/security/TokenProvider.java
+ org.example.app.security.TokenProvider
+org/example/app/security/CustomUserDetailsService.java
+ org.example.app.security.CustomUserDetailsService
+org/example/app/repository/UserRepository.java
+ org.example.app.repository.UserRepository
+org/example/app/model/User.java
+ org.example.app.model.User
+org/example/app/config/SecurityConfig.java
+ org.example.app.config.SecurityConfig
