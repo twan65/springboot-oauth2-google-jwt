@@ -53,19 +53,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   public HttpCookieOAuth2AuthorizationRequestRepository cookieAuthorizationRequestRepository() {
     return new HttpCookieOAuth2AuthorizationRequestRepository();
   }
-
-  @Override
-  public void configure(AuthenticationManagerBuilder authenticationManagerBuilder)
-      throws Exception {
-    authenticationManagerBuilder
-        .userDetailsService(customUserDetailsService)
-        .passwordEncoder(passwordEncoder());
-  }
-
-  @Bean
-  public PasswordEncoder passwordEncoder() {
-    return new BCryptPasswordEncoder();
-  }
+//
+//  @Override
+//  public void configure(AuthenticationManagerBuilder authenticationManagerBuilder)
+//      throws Exception {
+//
+//    // TODO: ID/PWログインは実装していないので、必要か確認必要
+//    authenticationManagerBuilder
+//        .userDetailsService(customUserDetailsService)
+//        .passwordEncoder(passwordEncoder());
+//  }
+//
+//  @Bean
+//  public PasswordEncoder passwordEncoder() {
+//    return new BCryptPasswordEncoder();
+//  }
 
   @Bean(BeanIds.AUTHENTICATION_MANAGER)
   @Override

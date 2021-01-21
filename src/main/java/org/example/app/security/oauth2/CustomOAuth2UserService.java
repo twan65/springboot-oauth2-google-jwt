@@ -19,6 +19,10 @@ import org.springframework.util.StringUtils;
 
 import java.util.Optional;
 
+/**
+ * ログイン成功すると呼ばれるクラス。
+ * プロバイダーから情報を取得して更新や登録を行う。
+ */
 @Service
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
